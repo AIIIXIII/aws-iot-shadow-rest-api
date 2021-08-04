@@ -1,0 +1,8 @@
+{
+    "url": "insert your aws iot core endpoint url in this specific format: https://your_endpoint/things/",
+    "acces_key": "your access key",
+    "secret_key": "your secret key",
+    "region": "your aws region es ca-central-1",
+    "service": "aws service es: iotdata",
+    "thing_name": "your iot thing name"
+}
