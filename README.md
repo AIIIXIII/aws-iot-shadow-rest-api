@@ -7,10 +7,24 @@ This simple script implements the following aws iot calls via Rest Api:
 2) UpdateThingShadow
 3) ListNamedShadowForThing
 
+NB: You must enable your device via this aws policy:
+```bash
+{
+"Effect": "Allow",
+"Action": [
+"iot:GetThingShadow",
+"iot:UpdateThingShadow",
+"iot:DeleteThingShadow"
+],
+"Resource": "arn:aws:iot:eu-central-1:643301819859:thing/${iot:Connection.Thing.ThingName}"
+}
+```
+See the official documentation [here](https://docs.aws.amazon.com/iot/latest/developerguide/device-shadow-rest-api.html) and [here](https://docs.aws.amazon.com/iot/latest/developerguide/iot-moisture-policy.html).
+
 
 ## Installation
 
-Run the following command to install the necessary dependencies
+Run the following command to install all the necessary dependencies:
 ```bash
 pip install -r requirements.txt
 ```
@@ -19,7 +33,7 @@ pip install -r requirements.txt
 
 1) Edit app-config.json and modify properties by entering your data (e.g. AWS API Secrets, endpoint url etc).
 
-2) Launch api-client.py 
+2) Launch api-client.py:
 
 ```bash
 python3 api-client.py
