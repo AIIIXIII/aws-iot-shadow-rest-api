@@ -16,7 +16,7 @@ NB: You must enable your device via this aws policy:
 "iot:UpdateThingShadow",
 "iot:DeleteThingShadow"
 ],
-"Resource": "arn:aws:iot:eu-central-1:643301819859:thing/${iot:Connection.Thing.ThingName}"
+"Resource": "arn:aws:iot:ca-central-1:XXXXXXXXXXXX:thing/${iot:Connection.Thing.ThingName}"
 }
 ```
 See the official documentation [here](https://docs.aws.amazon.com/iot/latest/developerguide/device-shadow-rest-api.html) and [here](https://docs.aws.amazon.com/iot/latest/developerguide/iot-moisture-policy.html).
